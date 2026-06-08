@@ -1,0 +1,25 @@
+# Terraform local files
+.terraform/
+terraform.tfstate
+terraform.tfstate.backup
+crash.log
+.terraform.lock.hcl
+
+# Terraform
+.terraform/
+.terraform.lock.hcl
+*.tfstate
+*.tfstate.*
+crash.log
+crash.*.log
+
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
