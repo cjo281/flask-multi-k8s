@@ -2,10 +2,15 @@ version: "3.9"
 
 services:
   api:
+    # Build the Flask API image from the app folder
     build: ./app
     container_name: flask-api
+
+    # Map container port 5000 to host port 5000
     ports:
       - "5000:5000"
+
+    # Environment variables injected into the container
     environment:
       DB_HOST: db
       DB_NAME: appdb
@@ -15,15 +20,20 @@ services:
       - db
 
   db:
-    image: postgres:15
+    # Use official PostgreSQL image
     container_name: postgres-db
+
+    # Database credentials
     environment:
       POSTGRES_DB: appdb
       POSTGRES_USER: appuser
       POSTGRES_PASSWORD: secret123
+
+    # Persistent storage + initialization script
     volumes:
       - db_data:/var/lib/postgresql/data
       - ./db/init.sql:/docker-entrypoint-initdb.d/init.sql
 
+# Named volume for persistent PostgreSQL storage
 volumes:
   db_data:
