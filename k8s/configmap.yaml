@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: api-config
+  namespace: default
+data:
+  # Hostname of the PostgreSQL service inside the cluster
+  DB_HOST: "postgres"
+
+  # Database name
+  DB_NAME: "appdb"
+
+  # Database user (non-sensitive)
+  DB_USER: "appuser"

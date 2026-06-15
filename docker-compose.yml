@@ -21,6 +21,7 @@ services:
 
   db:
     # Use official PostgreSQL image
+    image: postgres:15
     container_name: postgres-db
 
     # Database credentials
