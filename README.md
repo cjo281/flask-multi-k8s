@@ -381,6 +381,8 @@ This is horizontal scaling — the core of Kubernetes.
 
 ## STOP: THIS IS WHERE YOU FINISH RUNNING KUBERNETES LOCALLY
 
+##OPTIONAL. (WE ARE FOCUSING EVERYTHING LOCALLY)
+
 From now on, you are starting to push the image to registry in Azure
 
 ----------------------------------------------------------------------------
